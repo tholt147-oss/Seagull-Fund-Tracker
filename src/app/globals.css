@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --maroon: #862633;
+  --maroon-dark: #6b1e29;
+  --gold: #FFC72C; /* Salisbury official gold */
+  --gold-light: #ffd966;
+  --gold-dark: #d4a017;
+  --cream: #F0E9C8;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  /* Gold border frame around entire viewport */
+  border: 8px solid var(--gold);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--maroon);
+  border-radius: 4px;
+}
+
+/* Ticker flash animations */
+@keyframes flashGreen {
+  0% { background-color: rgba(34, 197, 94, 0.2); }
+  100% { background-color: transparent; }
+}
+@keyframes flashRed {
+  0% { background-color: rgba(239, 68, 68, 0.2); }
+  100% { background-color: transparent; }
+}
+.flash-green {
+  animation: flashGreen 1s ease-out;
+}
+.flash-red {
+  animation: flashRed 1s ease-out;
+}
+
+/* Gradient border utility */
+.gold-divider {
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
