@@ -13,6 +13,16 @@
 
 export const NEWS_ITEMS = [
   {
+    id: "2026-04-16-meeting",
+    date: "2026-04-16",
+    category: "Meeting Consensus",
+    title: "4/16 Meeting",
+    summary: "The committee rebalanced Financials and Communication Services — initiating two new positions, fully exiting two holdings, trimming three existing positions, and adding to two others.",
+    body: "The Sea Gull Fund Investment Committee met on April 16, 2026 and executed the following trades in Financials and Communication Services.\n\nNEW POSITIONS INITIATED:\n• Intercontinental Exchange (ICE) — 400 shares @ $163.31 (Financials)\n• MSCI Inc. (MSCI) — 100 shares @ $563.59 (Financials)\n\nPOSITIONS ADDED TO:\n• Meta Platforms (META) — added 20 shares @ $673.30 (Communication Services)\n• Walt Disney (DIS) — 550 shares @ $103.26 (Communication Services, establishing tracked position)\n\nPOSITIONS TRIMMED:\n• BlackRock (BLK) — sold 20 shares @ $1,021.85\n• American Express (AXP) — sold 25 shares @ $326.18\n• Charles Schwab (SCHW) — sold 250 shares @ $95.42\n\nPOSITIONS FULLY EXITED:\n• PayPal Holdings (PYPL) — 1,000 shares sold @ $49.20. Realized loss of approximately −$21,451 (−30.4%)\n• US Bancorp (USB) — 1,700 shares sold @ $55.62. Realized gain of approximately +$32,636 (+52.7%)\n\nSECTOR IMPACT:\n• Financials: 16.65% → 12.99% (exited PYPL and USB, added ICE and MSCI, trimmed BLK/AXP/SCHW)\n• Communication Services: 8.44% → 11.46% (added DIS, increased META)",
+    tickers: ["ICE", "MSCI", "META", "DIS", "BLK", "AXP", "SCHW", "PYPL", "USB"],
+    author: "Investment Committee"
+  },
+  {
     id: "2026-04-15-position-adjustments",
     date: "2026-04-15",
     category: "Portfolio Update",

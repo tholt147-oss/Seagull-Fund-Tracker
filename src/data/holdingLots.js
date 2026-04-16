@@ -1,4 +1,4 @@
-// Purchase lot data — updated 4/15/2026
+// Purchase lot data — updated 4/16/2026
 // Negative shares indicate a partial sell at that date.
 // Tickers not in this object will not show a detail view when clicked.
 export const HOLDING_LOTS = {
@@ -24,22 +24,19 @@ export const HOLDING_LOTS = {
   AXP:  [
     { date: '2025-11-06', shares: 200,  unitCost: 363.4356 },
     { date: '2025-11-18', shares: 25,   unitCost: 341.30 },
+    { date: '2026-04-16', shares: -25,  unitCost: 326.18 },  // partial sell
   ],
   BLK:  [
     { date: '2024-04-18', shares: 50,   unitCost: 760.4616 },
     { date: '2025-04-10', shares: 25,   unitCost: 842.57 },
     { date: '2025-11-06', shares: 25,   unitCost: 1059.074 },
+    { date: '2026-04-16', shares: -20,  unitCost: 1021.85 },  // partial sell
   ],
   SCHW: [
     { date: '2025-04-10', shares: 650,  unitCost: 71.93 },
     { date: '2025-04-10', shares: 200,  unitCost: 72.9974 },
     { date: '2025-11-06', shares: 250,  unitCost: 93.8472 },
-  ],
-  PYPL: [
-    { date: '2022-04-20', shares: 100,  unitCost: 95.9017 },
-    { date: '2023-04-18', shares: 200,  unitCost: 76.65 },
-    { date: '2024-04-18', shares: 600,  unitCost: 63.0669 },
-    { date: '2024-10-10', shares: 100,  unitCost: 78.905 },
+    { date: '2026-04-16', shares: -250, unitCost: 95.42 },   // partial sell
   ],
   EQIX: [{ date: '2025-10-09', shares: 35,   unitCost: 804.86 }],
   MRK:  [{ date: '2025-03-27', shares: 600,  unitCost: 87.83 }],
@@ -81,6 +78,7 @@ export const HOLDING_LOTS = {
     { date: '2024-10-17', shares: 85,   unitCost: 579.674 },
     { date: '2025-04-24', shares: 30,   unitCost: 526.86 },
     { date: '2025-11-17', shares: 40,   unitCost: 608.2986 },
+    { date: '2026-04-16', shares: 20,   unitCost: 673.30 },  // additional buy
   ],
   DUK:  [
     { date: '2025-10-09', shares: 350,  unitCost: 125.20 },
@@ -96,6 +94,10 @@ export const HOLDING_LOTS = {
   RBA:  [{ date: '2026-04-15', shares: 850,  unitCost: 104.25 }],
   APH:  [{ date: '2026-04-15', shares: 600,  unitCost: 127.15 }],
   MRVL: [{ date: '2026-04-15', shares: 700,  unitCost: 106.06 }],
+  // New positions initiated 4/16/2026
+  DIS:  [{ date: '2026-04-16', shares: 550,  unitCost: 103.26 }],
+  ICE:  [{ date: '2026-04-16', shares: 400,  unitCost: 163.31 }],
+  MSCI: [{ date: '2026-04-16', shares: 100,  unitCost: 563.59 }],
 };
 
-export const LOTS_AS_OF = '4/15/2026';
+export const LOTS_AS_OF = '4/16/2026';

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Header from '../components/Header';
+import SP500Benchmark from '../components/SP500Benchmark';
 import HoldingsTable from '../components/HoldingsTable';
 import SectorAllocation from '../components/SectorAllocation';
 import Footer from '../components/Footer';
@@ -60,6 +61,7 @@ export default function Home() {
         </div>
       </section>
 
+      <SP500Benchmark />
       <HoldingsTable />
       <SectorAllocation />
       <Footer />

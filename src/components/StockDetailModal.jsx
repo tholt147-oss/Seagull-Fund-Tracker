@@ -138,6 +138,14 @@ export default function StockDetailModal({ stock, onClose }) {
         </div>
 
         <div className="p-6 space-y-6">
+          {/* Company Description */}
+          {stock.description && (
+            <div className="bg-stone-50 rounded-xl border border-stone-200 px-5 py-4">
+              <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-1.5">About</p>
+              <p className="text-sm text-gray-700 leading-relaxed">{stock.description}</p>
+            </div>
+          )}
+
           {/* Position Summary */}
           <div>
             <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-3">Position Summary</h3>
