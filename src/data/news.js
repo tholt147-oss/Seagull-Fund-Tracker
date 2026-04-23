@@ -13,6 +13,16 @@
 
 export const NEWS_ITEMS = [
   {
+    id: "2026-04-22-healthcare-rebalance",
+    date: "2026-04-22",
+    category: "Meeting Consensus",
+    title: "4/22 Meeting — Health Care Rebalancing",
+    summary: "The committee restructured Health Care exposure, exiting Zoetis and initiating a position in Eli Lilly while trimming Merck.",
+    body: "At the April 22 meeting, the Investment Committee voted to rebalance the Health Care sector to better align with the fund's conviction-weighted approach.\n\nEli Lilly (LLY) — Initiated a 50-share position at $919.42 per share. The committee sees strong long-term upside driven by Lilly's GLP-1 drug franchise (Mounjaro and Zepbound), which has positioned the company at the center of the obesity and diabetes treatment market. Lilly's pipeline depth and pricing power support the thesis.\n\nZoetis (ZTS) — Fully exited 500 shares at $116.46. The position was originally purchased at $120.12, resulting in a realized loss of approximately −$1,828 (−3.0%). The committee determined that the capital could be more productively deployed into higher-conviction ideas with stronger near-term catalysts.\n\nMerck (MRK) — Trimmed 50 shares at $114.02, reducing the position from 600 to 550 shares. The partial sale locks in gains on a portion of the position (original cost basis of $87.83) while maintaining core exposure to Merck's Keytruda franchise.\n\nHealth Care sector weight moved from 4.67% to 4.01%, remaining within range of the 4.00% target allocation. The sector now holds two positions (MRK and LLY) versus the prior two (MRK and ZTS).",
+    tickers: ["LLY", "ZTS", "MRK"],
+    author: "Investment Committee"
+  },
+  {
     id: "2026-04-16-meeting",
     date: "2026-04-16",
     category: "Meeting Consensus",

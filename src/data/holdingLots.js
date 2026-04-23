@@ -39,8 +39,11 @@ export const HOLDING_LOTS = {
     { date: '2026-04-16', shares: -250, unitCost: 95.42 },   // partial sell
   ],
   EQIX: [{ date: '2025-10-09', shares: 35,   unitCost: 804.86 }],
-  MRK:  [{ date: '2025-03-27', shares: 600,  unitCost: 87.83 }],
-  ZTS:  [{ date: '2025-11-17', shares: 500,  unitCost: 120.115 }],
+  MRK:  [
+    { date: '2025-03-27', shares: 600,  unitCost: 87.83 },
+    { date: '2026-04-22', shares: -50,  unitCost: 114.02 },
+  ],
+  LLY:  [{ date: '2026-04-22', shares: 50, unitCost: 919.42 }],
   ADBE: [{ date: '2024-03-28', shares: 200,  unitCost: 502.2835 }],
   AAPL: [
     { date: '2025-04-08', shares: 250,  unitCost: 188.945 },
@@ -100,4 +103,4 @@ export const HOLDING_LOTS = {
   MSCI: [{ date: '2026-04-16', shares: 100,  unitCost: 563.59 }],
 };
 
-export const LOTS_AS_OF = '4/16/2026';
+export const LOTS_AS_OF = '4/22/2026';
