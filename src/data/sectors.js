@@ -12,5 +12,5 @@ export const SECTOR_ALLOCATION = [
   { sector: 'Real Estate',            gics: 60, indexValue: 266.51,  sp500Weight: 1.89,  currentWeight: 0.99,  rcmWeight: 1.00,  targetWeight: 1.00,  action: '0' },
 ];
 
-export const OTHER_ALLOCATION = { label: 'Other (SPY & Cash)', weight: 18.06 };
+export const OTHER_ALLOCATION = { label: 'Cash', weight: 0 };
 export const ALLOCATION_AS_OF = '4/22/2026';

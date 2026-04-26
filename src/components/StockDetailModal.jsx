@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react';
 import { X, ArrowUpRight, ArrowDownRight, TrendingUp, TrendingDown, Calendar, DollarSign } from 'lucide-react';
 import { HOLDING_LOTS, LOTS_AS_OF } from '../data/holdingLots';
-import IntradayChart from './IntradayChart';
+import StockChart from './StockChart';
 
 const fmt = (n) => n.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
 const fmtPct = (n) => `${n >= 0 ? '+' : ''}${n.toFixed(2)}%`;
@@ -186,11 +186,11 @@ export default function StockDetailModal({ stock, onClose }) {
             </div>
           </div>
 
-          {/* Intraday Performance Chart */}
+          {/* Performance Chart */}
           <div className="bg-white rounded-xl border-2 border-gold-500 p-5">
-            <h3 className="text-xs font-semibold uppercase tracking-wider text-maroon-800 mb-1">Intraday Performance</h3>
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-maroon-800 mb-1">Performance</h3>
             <div className="h-0.5 w-10 bg-gold-500 rounded mb-4" />
-            <IntradayChart
+            <StockChart
               ticker={stock.ticker}
               currentPrice={stock.price}
               previousClose={stock.prevClose}

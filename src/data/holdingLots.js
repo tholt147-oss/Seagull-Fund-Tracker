@@ -87,10 +87,6 @@ export const HOLDING_LOTS = {
     { date: '2025-10-09', shares: 350,  unitCost: 125.20 },
     { date: '2026-04-15', shares: 150,  unitCost: 129.36 },
   ],
-  SPY:  [
-    { date: '2025-12-18', shares: 130,  unitCost: 674.49 },
-    { date: '2025-12-23', shares: 470,  unitCost: 683.8658 },
-  ],
   // New positions initiated 4/15/2026
   MT:   [{ date: '2026-04-15', shares: 1650, unitCost: 65.47 }],
   ACM:  [{ date: '2026-04-15', shares: 925,  unitCost: 91.51 }],

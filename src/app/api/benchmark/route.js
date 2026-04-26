@@ -2,8 +2,8 @@ import { NextResponse } from 'next/server';
 
 const SYMBOL = 'SPY'; // S&P 500 ETF — benchmark for the Sea Gull Fund
 
-let cache = null;
-let cacheTimestamp = 0;
+// Use global to survive Next.js dev-mode hot reloads
+if (!global.__benchmarkCache) global.__benchmarkCache = { data: null, timestamp: 0 };
 const CACHE_TTL = 60 * 1000; // 60 seconds
 
 export async function GET() {
@@ -14,6 +14,7 @@ export async function GET() {
   }
 
   const now = Date.now();
+  const { data: cache, timestamp: cacheTimestamp } = global.__benchmarkCache;
   if (cache && now - cacheTimestamp < CACHE_TTL) {
     return NextResponse.json(cache);
   }
@@ -38,8 +39,7 @@ export async function GET() {
       lastUpdated: new Date().toISOString(),
     };
 
-    cache = data;
-    cacheTimestamp = now;
+    global.__benchmarkCache = { data, timestamp: now };
     return NextResponse.json(data);
   } catch (err) {
     console.error('[benchmark] fetch error:', err);

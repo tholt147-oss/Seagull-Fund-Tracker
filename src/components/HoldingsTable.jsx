@@ -5,6 +5,12 @@ import { ArrowUpRight, ArrowDownRight, RefreshCw, TrendingUp, TrendingDown, Minu
 import { HOLDING_LOTS } from '../data/holdingLots';
 import StockDetailModal from './StockDetailModal';
 
+function getTotalShares(ticker) {
+  const lots = HOLDING_LOTS[ticker];
+  if (!lots) return null;
+  return lots.reduce((sum, lot) => sum + lot.shares, 0);
+}
+
 const SECTOR_COLORS = {
   'Information Technology': '#4f46e5',
   'Financials': '#0891b2',
@@ -53,8 +59,13 @@ export default function HoldingsTable() {
     return () => clearInterval(interval);
   }, [fetchData]);
 
+  const holdingsWithShares = holdings.map(h => ({
+    ...h,
+    shares: getTotalShares(h.ticker) || 0,
+  }));
+
   // Sorting
-  const sorted = [...holdings].sort((a, b) => {
+  const sorted = [...holdingsWithShares].sort((a, b) => {
     let aVal = a[sortField];
     let bVal = b[sortField];
     if (typeof aVal === 'string') aVal = aVal.toLowerCase();
@@ -243,6 +254,7 @@ export default function HoldingsTable() {
                   <SortHeader label="Ticker" field="ticker" current={sortField} dir={sortDir} onClick={handleSort} />
                   <SortHeader label="Company" field="name" current={sortField} dir={sortDir} onClick={handleSort} />
                   <SortHeader label="Sector" field="sector" current={sortField} dir={sortDir} onClick={handleSort} />
+                  <SortHeader label="Shares" field="shares" current={sortField} dir={sortDir} onClick={handleSort} align="right" />
                   <SortHeader label="Price" field="price" current={sortField} dir={sortDir} onClick={handleSort} align="right" />
                   <SortHeader label="Change" field="change" current={sortField} dir={sortDir} onClick={handleSort} align="right" />
                   <SortHeader label="% Change" field="changePercent" current={sortField} dir={sortDir} onClick={handleSort} align="right" />
@@ -354,6 +366,11 @@ function StockRow({ stock, i, hideSector = false, onSelect }) {
             />
             {stock.sector}
           </span>
+        </td>
+      )}
+      {!hideSector && (
+        <td className="px-5 py-4 text-right font-mono font-semibold text-gray-700">
+          {getTotalShares(stock.ticker)?.toLocaleString() || '—'}
         </td>
       )}
       <td className="px-5 py-4 text-right font-mono font-semibold text-gray-900">

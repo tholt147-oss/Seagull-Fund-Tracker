@@ -2,7 +2,8 @@ import { NextResponse } from 'next/server';
 import { COMPANY_INFO } from '../../../data/companyInfo';
 
 // In-memory cache: { [ticker]: { data, timestamp } }
-const cache = {};
+// Use global to survive Next.js dev-mode hot reloads
+const cache = global.__quotesCache ?? (global.__quotesCache = {});
 const CACHE_TTL = 60 * 1000; // 60 seconds
 
 // Derive the tickers list directly from COMPANY_INFO so adding/removing
