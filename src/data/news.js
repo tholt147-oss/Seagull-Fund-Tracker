@@ -33,6 +33,16 @@ export const NEWS_ITEMS = [
     author: "Investment Committee"
   },
   {
+    id: "2026-03-12-energy-realestate",
+    date: "2026-03-12",
+    category: "Portfolio Update",
+    title: "3/12 Trade — Energy & Real Estate Adjustment (Retroactive Update)",
+    summary: "Equinix was fully exited and replaced with American Tower in Real Estate. Chevron position held. This trade was executed earlier in the semester and is being logged retroactively.",
+    body: "Note: This trade was executed on March 12, 2026 and is being added to the site retroactively.\n\nPer direction from Professor Herman Manakyan, the fund executed the following trades on 3/12/2026:\n\nEquinix (EQIX) — Fully exited 35 shares at $966.77 per share, generating proceeds of approximately $33,837. The original position was purchased at $804.86 per share, resulting in a realized gain of approximately +$5,667 (+20.1%). The committee determined that the capital would be better deployed into a broader REIT with stronger cell tower and data infrastructure exposure.\n\nAmerican Tower (AMT) — Initiated a 150-share position at $183.18 per share, totaling approximately $27,477. American Tower is one of the largest global REITs, owning and operating wireless communications infrastructure across 25 countries. The committee views AMT as a high-quality asset with durable recurring revenue from long-term tenant leases and strong exposure to 5G buildout.\n\nChevron (CVX) — The 500-share position was held with no changes.\n\nResulting sector weights based on a portfolio value of $2,536,420:\n• Energy: 4.03% (500 CVX @ $204.20 = $102,100)\n• Real Estate: 1.04% (150 AMT @ $175.50 = $26,325)",
+    tickers: ["EQIX", "AMT", "CVX"],
+    author: "Investment Committee"
+  },
+  {
     id: "2026-04-15-position-adjustments",
     date: "2026-04-15",
     category: "Portfolio Update",

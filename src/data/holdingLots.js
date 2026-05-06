@@ -38,7 +38,7 @@ export const HOLDING_LOTS = {
     { date: '2025-11-06', shares: 250,  unitCost: 93.8472 },
     { date: '2026-04-16', shares: -250, unitCost: 95.42 },   // partial sell
   ],
-  EQIX: [{ date: '2025-10-09', shares: 35,   unitCost: 804.86 }],
+  AMT:  [{ date: '2026-03-12', shares: 150,  unitCost: 183.18 }],
   MRK:  [
     { date: '2025-03-27', shares: 600,  unitCost: 87.83 },
     { date: '2026-04-22', shares: -50,  unitCost: 114.02 },
